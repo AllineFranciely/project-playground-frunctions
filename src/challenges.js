@@ -23,9 +23,11 @@ return resultado;
 function concatName(array) {
   let firstName = array[0];
   let lastName = array[(array.length) -1];
-  let result = lastName + firstName;
+  let result = lastName + ", " + firstName;
   return result;
 }
+let array = ["Lucas", "Fernando", "Alline"]
+console.log(concatName(array))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -48,8 +50,18 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = ((cat1 - mouse) * (-1));
+  let distCat2 = ((cat2 - mouse) * (-1));
+  let result;
+  if (distCat1 < distCat2) {
+    result = "cat1"
+  } else if (distCat1 > distCat2) {
+    result = "cat2";
+  } else if (distCat1 === distCat2) {
+    result = "Os gatos trombam e o rato foge"
+  }
+  return result;
 }
 
 // Desafio 8
