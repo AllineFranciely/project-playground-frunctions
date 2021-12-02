@@ -1,19 +1,17 @@
 // Desafio 10
 function techList(tech, name) {
-  let objectList = [];
-  let techOrdenada = tech.sort();
-  if (tech.length === 0) {
-    return ('Vazio!');
+  if (tech.length > 0) {
+    tech.sort();
+    for (index = 0; index < tech.length; index += 1) {
+      tech[index] = {
+        tech: tech[index],
+        name: name,
+      };
+    }
+  } else {
+    tech = 'Vazio!';
   }
-  for (let index = 0; index < techOrdenada.length; index += 1) {
-    let object = {
-      tech: '',
-      name: name,
-    };
-    object.tech = techOrdenada[index];
-    objectList.push(object);
-  }
-  return (objectList);
+  return tech;
 }
 
 // Desafio 11

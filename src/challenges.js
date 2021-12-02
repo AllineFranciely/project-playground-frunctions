@@ -50,6 +50,7 @@ function highestCount(numeros) {
 // Desafio 7
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 //Consultei o site acima para entender melhor o comando Math.abs
+
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
@@ -59,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distCat1 > distCat2) {
     resultado = "cat2";
   } else if (distCat1 === distCat2) {
-    resultado = "Os gatos trombam e o rato foge";
+    resultado = "os gatos trombam e o rato foge";
   }
   return resultado;
 }
@@ -69,8 +70,7 @@ let test3 = 3;
 console.log(catAndMouse(test, test2, test3));
 
 // Desafio 8
-//Consultei material do repositório da trybe para me auxiliar apenas a retornar o valor correto
-//https://github.com/tryber/sd-012-project-playground-functions/pull/148/files
+
 function fizzBuzz(numeros) {
   let answer = [];
   for (index = 0; index < numeros.length; index += 1) {
@@ -91,7 +91,9 @@ console.log(fizzBuzz(numeros));
 
 // Desafio 9
 // https://help.highbond.com/helpdocs/analytics/15/pt-br/Content/analytics/scripting/functions/r_replace.htm
-//Pesquisei no documento acima uma maneira mais fácil de fazer a conversão de textos.
+// https://www.w3schools.com/jsref/jsref_replace.asp
+//Pesquisei nos documentos acima o comando replace e recebi ajuda nas mentorias.
+
 function encode(mensagemLetras) {
   mensagemLetras = mensagemLetras.replace(/a/g, "1"); 
   mensagemLetras = mensagemLetras.replace(/e/g, "2"); 
@@ -100,7 +102,6 @@ function encode(mensagemLetras) {
   mensagemLetras = mensagemLetras.replace(/u/g, "5"); 
   return mensagemLetras
 }
-
 
 function decode(mensagemCodigos) {
   mensagemCodigos = mensagemCodigos.replace(/1/g, "a"); 
