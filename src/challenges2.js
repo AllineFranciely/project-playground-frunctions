@@ -1,29 +1,33 @@
 // Desafio 10
 function techList(tech, name) {
   let objectList = [];
-  let techAleatoria = tech.sort();
+  let techOrdenada = tech.sort();
   if (tech.length === 0) {
     return ('Vazio!');
   }
-  for (index = 0; index < techAleatoria.length; index += 1) {
+  for (let index = 0; index < techOrdenada.length; index += 1) {
     let object = {
       tech: '',
       name: name,
     };
-    object.tech = techAleatoria[index];
+    object.tech = techOrdenada[index];
     objectList.push(object);
   }
   return (objectList);
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numeros) {
   // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let somaAB = Math.abs(A + B);
+  let somaAC = Math.abs(A + C);
+  let somaBC = math.abs(B + C);
+  let diferencaAB = Math.abs(A - B);
+  if (lineA < somaBC && lineA > diferencaBC)
 }
 
 // Desafio 13

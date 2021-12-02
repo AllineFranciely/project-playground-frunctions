@@ -93,37 +93,24 @@ console.log(fizzBuzz(numeros));
 // https://help.highbond.com/helpdocs/analytics/15/pt-br/Content/analytics/scripting/functions/r_replace.htm
 //Pesquisei no documento acima uma maneira mais fácil de fazer a conversão de textos.
 function encode(mensagemLetras) {
-  let resultMensagem = " ";
-  for (index = 0; index < mensagemLetras.length; index +=1) {
-    if (mensagemLetras[index] === "a"); {
-    resultmensagem += "1"; 
-  } 
-  if (mensagemLetras[index] === "e") {
-    resultMensagem += "2".
-  }
-  if (mensagemLetras[index] === "i") {
-    resultMensagem += "3".
-  }
-  if (mensagemLetras[index] === "o") {
-    resultMensagem += "4".
-  }
-  if (mensagemLetras[index] === "u") {
-    resultMensagem += "5"
-}
-return resultMensagem;
+  mensagemLetras = mensagemLetras.replace(/a/g, "1"); 
+  mensagemLetras = mensagemLetras.replace(/e/g, "2"); 
+  mensagemLetras = mensagemLetras.replace(/i/g, "3"); 
+  mensagemLetras = mensagemLetras.replace(/o/g, "4"); 
+  mensagemLetras = mensagemLetras.replace(/u/g, "5"); 
+  return mensagemLetras
 }
 
-}
-mensagemLetras = "Oi trybe";
-console.log(encode(mensagemLetras));
+
 function decode(mensagemCodigos) {
-  mensagemCodigos = mensagemCodigos.replace(1, 1, "a"); 
-  mensagemCodigos = mensagemCodigos.replace(2, 2, "e"); 
-  mensagemCodigos = mensagemCodigos.replace(3, 3, "i"); 
-  mensagemCodigos = mensagemCodigos.replace(4, 4, "0"); 
-  mensagemCodigos = mensagemCodigos.replace(5, 5, "u"); 
+  mensagemCodigos = mensagemCodigos.replace(/1/g, "a"); 
+  mensagemCodigos = mensagemCodigos.replace(/2/g, "e"); 
+  mensagemCodigos = mensagemCodigos.replace(/3/g, "i"); 
+  mensagemCodigos = mensagemCodigos.replace(/4/g, "o"); 
+  mensagemCodigos = mensagemCodigos.replace(/5/g, "u"); 
   return mensagemCodigos
 }
+
 
 
 module.exports = {
