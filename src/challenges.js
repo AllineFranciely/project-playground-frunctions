@@ -48,6 +48,8 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+//Consultei o site acima para entender melhor o comando Math.abs
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
@@ -67,6 +69,8 @@ let test3 = 3;
 console.log(catAndMouse(test, test2, test3));
 
 // Desafio 8
+//Consultei material do repositório da trybe para me auxiliar apenas a retornar o valor correto
+//https://github.com/tryber/sd-012-project-playground-functions/pull/148/files
 function fizzBuzz(numeros) {
   let answer = [];
   for (index = 0; index < numeros.length; index += 1) {
@@ -86,12 +90,41 @@ let numeros = [15, 3, 5, 7];
 console.log(fizzBuzz(numeros));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// https://help.highbond.com/helpdocs/analytics/15/pt-br/Content/analytics/scripting/functions/r_replace.htm
+//Pesquisei no documento acima uma maneira mais fácil de fazer a conversão de textos.
+function encode(mensagemLetras) {
+  let resultMensagem = " ";
+  for (index = 0; index < mensagemLetras.length; index +=1) {
+    if (mensagemLetras[index] === "a"); {
+    resultmensagem += "1"; 
+  } 
+  if (mensagemLetras[index] === "e") {
+    resultMensagem += "2".
+  }
+  if (mensagemLetras[index] === "i") {
+    resultMensagem += "3".
+  }
+  if (mensagemLetras[index] === "o") {
+    resultMensagem += "4".
+  }
+  if (mensagemLetras[index] === "u") {
+    resultMensagem += "5"
 }
-function decode() {
-  // seu código aqui
+return resultMensagem;
 }
+
+}
+mensagemLetras = "Oi trybe";
+console.log(encode(mensagemLetras));
+function decode(mensagemCodigos) {
+  mensagemCodigos = mensagemCodigos.replace(1, 1, "a"); 
+  mensagemCodigos = mensagemCodigos.replace(2, 2, "e"); 
+  mensagemCodigos = mensagemCodigos.replace(3, 3, "i"); 
+  mensagemCodigos = mensagemCodigos.replace(4, 4, "0"); 
+  mensagemCodigos = mensagemCodigos.replace(5, 5, "u"); 
+  return mensagemCodigos
+}
+
 
 module.exports = {
   calcArea,
