@@ -26,8 +26,6 @@ function concatName(array) {
   let result = lastName + ", " + firstName;
   return result;
 }
-let array = ["Lucas", "Fernando", "Alline"]
-console.log(concatName(array))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -51,23 +49,41 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = ((cat1 - mouse) * (-1));
-  let distCat2 = ((cat2 - mouse) * (-1));
-  let result;
+  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
+  let resultado;
   if (distCat1 < distCat2) {
-    result = "cat1"
+    resultado = "cat1";
   } else if (distCat1 > distCat2) {
-    result = "cat2";
+    resultado = "cat2";
   } else if (distCat1 === distCat2) {
-    result = "Os gatos trombam e o rato foge"
+    resultado = "Os gatos trombam e o rato foge";
   }
-  return result;
+  return resultado;
 }
+let test = 2;
+let test2 = 3;
+let test3 = 3;
+console.log(catAndMouse(test, test2, test3));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let answer = [];
+  for (index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 !== 0) {
+      answer[index] = "fizz"; 
+    } else if (numeros[index] % 3 !== 3 && numeros[index] % 5 === 0) {
+      answer[index] = "buzz";
+    } else if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      answer[index] = "fizzBuzz";
+    } else if ( numeros[index] % 3 !== 0 && numeros[index] % 5 !== 0) {
+      answer[index] = "bug!";
+    }
+  }
+  return answer;
 }
+let numeros = [15, 3, 5, 7];
+console.log(fizzBuzz(numeros));
 
 // Desafio 9
 function encode() {
