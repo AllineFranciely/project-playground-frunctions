@@ -12,11 +12,11 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-console.log(calcArea(8,10))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let resultado = frase.split(" ");
+return resultado;
 }
 
 // Desafio 4
