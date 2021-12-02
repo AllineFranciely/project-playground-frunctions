@@ -1,19 +1,20 @@
 // Desafio 10
-function techList(tech, name) {
+function techList(tech, nome) {
+  let result = [];
   if (tech.length > 0) {
-    tech.sort();
-    for (index = 0; index < tech.length; index += 1) {
-      tech[index] = {
-        tech: tech[index],
-        name: name,
+    let techOrdem = tech.sort();
+    for (let i = 0; i < techOrdem.length; i += 1) {
+      let objeto = {
+        tech: '',
+        name: nome,
       };
+      objeto.tech = techOrdem[i];
+      result.push(objeto);
     }
-  } else {
-    tech = 'Vazio!';
+    return result;
   }
-  return tech;
+  return 'Vazio!';
 }
-
 // Desafio 11
 function generatePhoneNumber(numeros) {
   // seu código aqui
@@ -21,11 +22,21 @@ function generatePhoneNumber(numeros) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let somaAB = Math.abs(A + B);
-  let somaAC = Math.abs(A + C);
-  let somaBC = math.abs(B + C);
-  let diferencaAB = Math.abs(A - B);
-  if (lineA < somaBC && lineA > diferencaBC)
+  let somaAB = Math.abs(lineA + lineB);
+  let somaAC = Math.abs(lineA + lineC);
+  let somaBC = math.abs(lineB + lineC);
+  let difAB = Math.abs(lineA - lineB);
+  let difAC = Math.abs(lineA - lineC);
+  let difBC = Math.abs(lineB - lineC);
+  let ladoMaior = " ";
+  if (lineA < somaBC && lineB < somaAC && lineC < somaBC) {
+  ladoMaior = true;  
+  } else {
+    ladoMaior = false;
+  }
+  if (lineA > difBC && lineB > difAC && lineC > difAB) {
+
+  }
 }
 
 // Desafio 13
