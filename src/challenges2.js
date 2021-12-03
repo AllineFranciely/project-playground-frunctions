@@ -22,22 +22,32 @@ function generatePhoneNumber(numeros) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let somaAB = Math.abs(lineA + lineB);
-  let somaAC = Math.abs(lineA + lineC);
-  let somaBC = math.abs(lineB + lineC);
-  let difAB = Math.abs(lineA - lineB);
-  let difAC = Math.abs(lineA - lineC);
-  let difBC = Math.abs(lineB - lineC);
-  let ladoMaior = " ";
-  if (lineA < somaBC && lineB < somaAC && lineC < somaBC) {
-  ladoMaior = true;  
-  } else {
-    ladoMaior = false;
+  function checkA(lineA, lineB, lineC) {
+    if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC)) {
+      return false;
+    } 
+    return true;
   }
-  if (lineA > difBC && lineB > difAC && lineC > difAB) {
-
+  
+  function checkB(lineA, lineB, lineC) {
+    if (lineB > lineC + lineA || lineB < Math.abs(lineC - lineA)) {
+      return false;
+    } 
+    return true;
   }
+  
+  function checkC(lineA, lineB, lineC) {
+    if (lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
+      return false;
+    }
+    return true;
+  }
+  let a = checkA(lineA, lineB, lineC);
+  let b = checkB(lineA, lineB, lineC);
+  let c = checkC(lineA, lineB, lineC);
+  return a && b && c;
 }
+
 
 // Desafio 13
 function hydrate() {
