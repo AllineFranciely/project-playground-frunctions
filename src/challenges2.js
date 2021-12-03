@@ -21,6 +21,9 @@ function generatePhoneNumber(numeros) {
 }
 
 // Desafio 12
+// recorri ao repositório da trybe para verificar a forma de retornar os valores de 3 funções juntas
+// https://github.com/tryber/sd-012-project-playground-functions/pull/14/files
+
 function triangleCheck(lineA, lineB, lineC) {
   function checkA(lineA, lineB, lineC) {
     if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC)) {
@@ -28,7 +31,7 @@ function triangleCheck(lineA, lineB, lineC) {
     } 
     return true;
   }
-  
+
   function checkB(lineA, lineB, lineC) {
     if (lineB > lineC + lineA || lineB < Math.abs(lineC - lineA)) {
       return false;
