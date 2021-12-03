@@ -76,11 +76,14 @@ function fizzBuzz(numeros) {
   for (index = 0; index < numeros.length; index += 1) {
     if (numeros[index] % 3 === 0 && numeros[index] % 5 !== 0) {
       answer[index] = "fizz"; 
-    } else if (numeros[index] % 3 !== 3 && numeros[index] % 5 === 0) {
+    } 
+    if (numeros[index] % 3 !== 3 && numeros[index] % 5 === 0) {
       answer[index] = "buzz";
-    } else if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+    } 
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
       answer[index] = "fizzBuzz";
-    } else if ( numeros[index] % 3 !== 0 && numeros[index] % 5 !== 0) {
+    }
+    if ( numeros[index] % 3 !== 0 && numeros[index] % 5 !== 0) {
       answer[index] = "bug!";
     }
   }
@@ -92,7 +95,7 @@ console.log(fizzBuzz(numeros));
 // Desafio 9
 // https://help.highbond.com/helpdocs/analytics/15/pt-br/Content/analytics/scripting/functions/r_replace.htm
 // https://www.w3schools.com/jsref/jsref_replace.asp
-//Pesquisei nos documentos acima o comando replace e recebi ajuda nas mentorias.
+// Pesquisei nos documentos acima o comando replace e recebi ajuda nas mentorias.
 
 function encode(mensagemLetras) {
   mensagemLetras = mensagemLetras.replace(/a/g, "1"); 
